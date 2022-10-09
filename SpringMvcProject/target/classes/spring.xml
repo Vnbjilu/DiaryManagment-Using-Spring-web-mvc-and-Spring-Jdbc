@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="diary" class="vikas.RatanRaman.Diary" scope="prototype"></bean>
+	<bean id="diaryDao" class="vikas.RatanRaman.DiaryDao">
+	<property name="temp" ref="jdbc"></property>
+	</bean>
 	<bean id="user" class="vikas.RatanRaman.User"></bean>
 	<bean id="userdao" class="vikas.RatanRaman.UserDao">
 		<property name="temp" ref="jdbc"></property>
